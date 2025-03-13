@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=0 python finetune.py \
+--data_path ./data/PwC_train.jsonl \
+--lm_path meta-llama/Llama-2-7b-hf \
+--save_path ./output \
+--max_epoch 3 \
+--max_seq_len 1024 \
+--max_chunk_len 512 \
+--save_interval 5000 \
+--gradient_accumulation 128 \
+--avg_level sentence \
+--clip_grad \
+--max_norm 1 \
+--use_chunk \
+--shuffle \
